@@ -7,11 +7,13 @@ import { MateriasService } from './services/materias.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CabeceraComponent
   ],
   imports: [
     BrowserModule,
