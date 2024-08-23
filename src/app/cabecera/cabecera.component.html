@@ -1,1 +1,39 @@
-<p>cabecera works!</p>
+
+<header class="mb-5">
+    <nav class="navbar has-background-dark px-2 py-1" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <h3 class="is-size-5 has-text-weight-bold">
+                <i class="fa-solid fa-location-crosshairs"></i> AcademicTrack
+            </h3>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="true" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" routerLink="/materias">
+              Plan de Estudio
+            </a>
+
+            <a class="navbar-item" routerLink="/aprobadas">
+              Materias Aprobadas
+            </a>
+
+            <a class="navbar-item" routerLink="/">
+              Historia Academica
+            </a>
+
+            <a class="navbar-item" routerLink="/ayuda">
+              Ayuda
+            </a>
+          </div>
+        </div>
+      </nav>
+</header>
