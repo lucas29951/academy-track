@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
+import { AprobadasComponent } from './aprobadas/aprobadas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     CabeceraComponent,
-    SeguimientoComponent
+    SeguimientoComponent,
+    AprobadasComponent
   ],
   imports: [
     BrowserModule,
