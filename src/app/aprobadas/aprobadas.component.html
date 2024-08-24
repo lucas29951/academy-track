@@ -1,1 +1,22 @@
-<p>aprobadas works!</p>
+
+<app-cabecera></app-cabecera>
+
+<div class="container content is-normal">
+    <h2 class="mt-4 ml-4">Materias Aprobadas</h2><h3 class="is-flex is-justify-content-end mr-5">{{ aprobadas }} de {{ totalMaterias }}</h3>
+    
+    <progress class="progress is-medium is-info" [value]="progreso" max="100"></progress>
+  
+    <div class="mt-6 mb-5 mx-3" *ngIf="materiasAprobadas.length > 0; else noAprobadas">
+        <article class="message is-primary" *ngFor="let materia of materiasAprobadas">
+            <div class="message-body">
+              <h4>{{ materia.nombre }}</h4>
+              <strong>Nota: {{ materia.notaFinal }}</strong>
+            </div>
+          </article>
+    </div>
+  
+    <ng-template #noAprobadas>
+      <p class="has-text-centered">No hay materias aprobadas.</p>
+    </ng-template>
+  </div>
+  
