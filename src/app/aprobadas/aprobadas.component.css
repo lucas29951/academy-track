@@ -1,0 +1,32 @@
+
+.progress {
+    width: 100%;
+}
+
+@media (min-width: 300px) and (max-width: 480px){
+    .progress {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width:767px){
+    .progress {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .progress {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1999px){
+    .progress {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
