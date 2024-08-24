@@ -1,1 +1,74 @@
-<p>seguimiento works!</p>
+
+<app-cabecera></app-cabecera>
+
+<div class="container content is-normal">
+  <h2 class="mt-4 ml-4">Materias</h2>
+  <div *ngFor="let group of groupedMaterias | keyvalue">
+    <h3 class="is-clickable mx-4 is-flex is-justify-content-space-between is-align-items-center has-background-dark p-4 box" (click)="toggleGroup(group.key)">
+      {{ group.key }}
+      <span class="icon">
+        <i class="fa-solid" [ngClass]="group.value.open ? 'fa-chevron-down' : 'fa-chevron-up'"></i>
+      </span>
+    </h3>
+    <div class="columns is-multiline" [ngClass]="{'is-hidden': !group.value.open}">
+      <div class="column is-one-third" *ngFor="let materia of group.value.materias">
+        <div class="card mb-6">
+          <header class="card-header has-background-dark is-flex is-align-items-center" [ngClass]="getCardHeaderClass(materia.estado)">
+            <div class="card-header-title">{{ materia.nombre }}</div>
+            <strong class="mr-3"><span class="tag">{{ materia.estado }}</span></strong>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>Horas Semanales: {{ materia.horasSemanales }}</p>
+              <p>Horas Totales: {{ materia.horasTotales }}</p>
+               <p *ngIf="materia.correlativasRegular.length === 0">Correlativa Regular: Ninguna</p>
+               <p *ngIf="materia.correlativasRegular.length > 0">
+                Correlativa Regular: 
+                <span *ngFor="let correlativa of getCorrelativasNombres(materia.correlativasRegular)" [ngClass]="getEstadoClass(correlativa.estado)">
+                  <li>{{ correlativa.nombre }}</li>
+                </span>
+               </p>
+              <p *ngIf="materia.correlativasAprobada.length === 0">Correlativa Aprobada: Ninguna</p>
+              <p *ngIf="materia.correlativasAprobada.length > 0">
+                Correlativa Aprobada: 
+                <span *ngFor="let correlativa of getCorrelativasNombres(materia.correlativasAprobada)" [ngClass]="getEstadoClass(correlativa.estado)">
+                  <li>{{ correlativa.nombre }}</li>
+                </span>
+               </p>
+            </div>
+          </div>
+          <footer class="card-footer is-size-7 has-text-weight-medium" [ngClass]="getCardFooterClass(materia.estado)">
+            <a class="card-footer-item" (click)="openModal(materia)">Aprobada</a>
+            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'regular')" [ngClass]="{'is-hidden': materia.estado === 'regular'}">Regular</a>
+            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'en curso')" [ngClass]="{'is-hidden': materia.estado === 'en curso' }">En Curso</a>
+            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'reprobada')">Reprobada</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" [ngClass]="{'is-active': isModalActive}">
+  <div class="modal-background" (click)="closeModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Ingresar Nota Final</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label">Nota Final</label>
+        <div class="control">
+          <input class="input" type="number" [(ngModel)]="notaFinal" placeholder="Ingrese la nota">
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="buttons">
+        <button class="button is-success" (click)="saveNotaFinal()">Guardar</button>
+        <button class="button" (click)="closeModal()">Cancelar</button>
+      </div>
+    </footer>
+  </div>
+</div>
