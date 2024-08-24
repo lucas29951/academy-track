@@ -1,0 +1,15 @@
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.has-text-success {
+    text-decoration: line-through;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .is-one-third {
+        width: 50%;
+    }
+}
