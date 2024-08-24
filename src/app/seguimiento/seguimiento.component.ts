@@ -1,18 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MateriasService } from '../services/materias.service';
-
-interface Materia {
-  id: number;
-  nombre: string;
-  modulo: number;
-  anio: number;
-  horasSemanales: number;
-  horasTotales: number;
-  correlativasRegular: number[];
-  correlativasAprobada: number[];
-  estado: string;
-  notaFinal: number;
-}
+import { Materia } from '../interfaces/materia';
 
 @Component({
   selector: 'app-seguimiento',
