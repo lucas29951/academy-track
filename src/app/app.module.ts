@@ -10,6 +10,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { AprobadasComponent } from './aprobadas/aprobadas.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AprobadasComponent } from './aprobadas/aprobadas.component';
     PrincipalComponent,
     CabeceraComponent,
     SeguimientoComponent,
-    AprobadasComponent
+    AprobadasComponent,
+    AyudaComponent
   ],
   imports: [
     BrowserModule,
