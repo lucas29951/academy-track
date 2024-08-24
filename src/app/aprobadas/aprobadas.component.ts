@@ -16,6 +16,9 @@ export class AprobadasComponent implements OnInit {
   constructor(private materiasService: MateriasService) { }
 
   ngOnInit(): void {
+    this.cargarMaterias();
+    this.filtrarAprobadas();
+    this.calcularProgreso();
   }
 
   cargarMaterias() {
