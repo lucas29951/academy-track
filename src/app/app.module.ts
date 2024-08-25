@@ -11,6 +11,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento.component';
 import { AprobadasComponent } from './aprobadas/aprobadas.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
+import { HistoriaComponent } from './historia/historia.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AyudaComponent } from './ayuda/ayuda.component';
     CabeceraComponent,
     SeguimientoComponent,
     AprobadasComponent,
-    AyudaComponent
+    AyudaComponent,
+    HistoriaComponent
   ],
   imports: [
     BrowserModule,
