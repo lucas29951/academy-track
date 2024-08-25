@@ -21,8 +21,20 @@
     </section>
   
     <section class="is-flex is-justify-content-center is-align-items-center mt-3">
-      <div *ngIf="mostrarBotonInicio" class="mb-5">
-        <button class="button is-info is-medium is-rounded" (click)="iniciar()">Iniciar</button>
+      <div *ngIf="mostrarBotonInicio" class="boxSelect mb-5 px-6">
+        <div class="field">
+          <label class="label">Selecciona tu carrera:</label>
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="selectedCarrera">
+                <option value="" disabled selected>Elegi una carrera</option>
+                <option *ngFor="let carrera of carreras" [value]="carrera">{{ carrera }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="button is-info is-medium is-rounded mt-4" [disabled]="!selectedCarrera" (click)="iniciar()">Iniciar</button>
       </div>
       
       <div *ngIf="!mostrarBotonInicio" class="mb-5">
