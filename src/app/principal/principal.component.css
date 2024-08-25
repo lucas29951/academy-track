@@ -2,3 +2,15 @@
 .container {
     height: 100vh;
 }
+
+.boxSelect {
+    width: 90vw;
+}
+
+select, .select {
+    width: 100%;
+}
+
+.button.is-info {
+    width: 100%;
+}
