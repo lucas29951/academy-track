@@ -9,6 +9,8 @@ import { MateriasService } from '../services/materias.service';
 })
 export class PrincipalComponent implements OnInit {
   mostrarBotonInicio = false;
+  selectedCarrera: string = '';
+  carreras: string[] = ['Programador Universitario en Informtica'];
 
   constructor(
     private materiasService: MateriasService,
@@ -26,7 +28,11 @@ export class PrincipalComponent implements OnInit {
   }
 
   iniciar() {
-    this.materiasService.loadDefaultMateriasData();
-    this.router.navigate(['/materias']);
+    if (this.selectedCarrera) {
+      localStorage.setItem('carreraSeleccionada', this.selectedCarrera);
+      this.mostrarBotonInicio = false;
+      this.materiasService.loadDefaultMateriasData();
+      this.router.navigate(['/seguimiento']);
+    }
   }
 }
