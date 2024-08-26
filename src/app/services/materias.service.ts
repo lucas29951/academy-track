@@ -339,6 +339,17 @@ export class MateriasService {
     localStorage.setItem('carreras', JSON.stringify(data));
   }
 
+  loadMateriasData(carrera: string) {
+    const data = this.getCarrerasData();
+    let materias;
+    for (let i = 0; i < data[0].carreras.length; i++){
+      if (carrera === data[0].carreras[i].nombre) {
+        materias = data[0].carreras[i].materias;
+      }
+    }
+    localStorage.setItem('materias', JSON.stringify(materias));
+  }
+
   loadDefaultMateriasData() {
     const defaultData = [
       {
