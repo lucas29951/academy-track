@@ -2,3 +2,65 @@
 .level-item {
     border-radius: .7rem;
 }
+
+@media (min-width: 300px) and (max-width: 480px){
+    .level-item {
+        width: 95%;
+    }
+
+    .box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .boxMateria {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width:767px){
+    .level-item {
+        width: 95%;
+    }
+
+    .box {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .boxMateria {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .level {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .boxMateria {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1999px){
+    .level {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .boxMateria {
+        width: 100%;
+    }
+}
