@@ -633,6 +633,11 @@ export class MateriasService {
     localStorage.setItem('materias', JSON.stringify(defaultData));
   }
 
+  getCarrerasData() {
+    const data = localStorage.getItem('carreras');
+    return data ? JSON.parse(data) : null;
+  }
+
   getMateriasData() {
     const data = localStorage.getItem('materias');
     return data ? JSON.parse(data) : null;
