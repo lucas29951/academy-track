@@ -28,7 +28,7 @@
             <div class="select">
               <select [(ngModel)]="selectedCarrera">
                 <option value="" disabled selected>Elegi una carrera</option>
-                <option *ngFor="let carrera of carreras" [value]="carrera">{{ carrera }}</option>
+                <option *ngFor="let carrera of carreras" [value]="carrera.nombre">{{ carrera.nombre }}</option>
               </select>
             </div>
           </div>
