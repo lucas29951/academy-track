@@ -1,1 +1,98 @@
-<p>historia works!</p>
+
+<app-cabecera></app-cabecera>
+
+<div class="container">
+    <section class="section has-text-centered">
+      <h1 class="title">Historia Académica</h1>
+      <p class="subtitle">Revisa tu progreso académico a lo largo de la carrera</p>
+    </section>
+  
+    <nav class="level">
+        <div class="level-item has-text-centered has-background-info has-text-light py-3">
+          <div>
+            <p class="heading">Materias Regulares</p>
+            <p class="title">{{ materiasRegulares.length }}</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered has-background-warning has-text-light py-3">
+          <div>
+            <p class="heading">Materias En Curso</p>
+            <p class="title">{{ materiasEnCurso.length }}</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered has-background-success has-text-light py-3">
+          <div>
+            <p class="heading">Materias Aprobadas</p>
+            <p class="title">{{ materiasAprobadas.length }}</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered has-background-danger has-text-light py-3">
+          <div>
+            <p class="heading">Materias Reprobadas</p>
+            <p class="title">{{ materiasReprobadas.length }}</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered has-background-dark has-text-light py-3">
+          <div>
+            <p class="heading">Total de Materias</p>
+            <p class="title">{{ totalMaterias }}</p>
+          </div>
+        </div>
+      </nav>
+
+    <section class="box my-5">
+      <h2 class="title is-4">Resumen Académico</h2>
+      <div class="columns">
+        <div class="column">
+          <p><strong>Total de Materias:</strong> {{ totalMaterias }}</p>
+          <p><strong>Materias Aprobadas:</strong> {{ materiasAprobadas.length }}</p>
+          <p><strong>Materias en Curso:</strong> {{ materiasEnCurso.length }}</p>
+          <p><strong>Materias Regulares:</strong> {{ materiasRegulares.length }}</p>
+          <p><strong>Materias Reprobadas:</strong> {{ materiasReprobadas.length }}</p>
+        </div>
+        <div class="column">
+          <progress class="progress is-info" [value]="porcentajeAvance" max="100">{{ porcentajeAvance }}%</progress>
+          <p class="ml-1">Progreso en la Carrera: {{ porcentajeAvance }}%</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="box my-5">
+      <h2 class="title is-4">Listado Cronológico de Materias</h2>
+      <div *ngFor="let materia of materias">
+        <div class="box mb-3">
+          <h3 class="title is-5">{{ materia.nombre }}</h3>
+          <p><strong>Estado: </strong> <span [ngClass]="getClassForEstado(materia.estado)">{{ materia.estado }}</span></p>
+          <p><strong>Nota Final:</strong> {{ materia.notaFinal || 'N/A' }}</p>
+          <p><strong>Fecha de Aprobación:</strong> {{ materia.fechaAprobacion || 'N/A' }}</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="box my-5">
+      <h2 class="title is-4">Progreso por Año/Semestre</h2>
+      <!-- Aquí puedes añadir un componente desplegable para cada año o semestre -->
+      <div *ngFor="let year of aniosCursados">
+        <h3 class="title is-5 is-clickable is-flex is-align-items-center is-justify-content-space-between box has-background-dark mb-4" (click)="toggleYear(year)">
+          {{ year.anio }}° Año
+          <span class="icon">
+            <i class="fa-solid" [ngClass]="year.open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+          </span>
+        </h3>
+        <div *ngIf="year.open" class="mb-4">
+          <!-- Mostrar materias de ese año -->
+          <div *ngFor="let materia of year.materias" class="ml-4">
+            <li>{{ materia.nombre }}</li>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="box my-5">
+      <h2 class="title is-4">Promedio General</h2>
+      <p><strong>Promedio Sin Aplazos:</strong> {{ promedioGeneral }}</p>
+      <p><strong>Promedio Con Aplazos:</strong> {{ promedioConAplazos }}</p>
+      <button class="button is-info mt-3">Exportar Historia Académica</button>
+    </section>
+  </div>
+  
