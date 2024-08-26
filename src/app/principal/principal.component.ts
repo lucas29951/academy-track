@@ -10,7 +10,7 @@ import { MateriasService } from '../services/materias.service';
 export class PrincipalComponent implements OnInit {
   mostrarBotonInicio = false;
   selectedCarrera: string = '';
-  carreras: string[] = ['Programador Universitario en Informtica'];
+  carreras: any[] = [];
 
   constructor(
     private materiasService: MateriasService,
@@ -18,6 +18,10 @@ export class PrincipalComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.materiasService.loadCarrerasData();
+    const data = this.materiasService.getCarrerasData();
+    this.carreras = data[0].carreras;
+
     const materias = this.materiasService.checkMateriasInLocalStorage();
 
     if (materias) {
@@ -31,7 +35,7 @@ export class PrincipalComponent implements OnInit {
     if (this.selectedCarrera) {
       localStorage.setItem('carreraSeleccionada', this.selectedCarrera);
       this.mostrarBotonInicio = false;
-      this.materiasService.loadDefaultMateriasData();
+      this.materiasService.loadMateriasData(this.selectedCarrera);
       this.router.navigate(['/seguimiento']);
     }
   }
