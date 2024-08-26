@@ -40,9 +40,9 @@ export class HistoriaComponent implements OnInit {
     this.materiasEnCurso = this.materias.filter(m => m.estado === 'en curso');
     this.materiasRegulares = this.materias.filter(m => m.estado === 'regular');
     const totalNotas = this.materiasAprobadas.reduce((sum, m) => sum + (m.notaFinal || 0), 0);
-    this.promedioGeneral = this.materiasAprobadas.length ? Math.round(totalNotas / this.materiasAprobadas.length) : 0;
+    this.promedioGeneral = this.materiasAprobadas.length ? (totalNotas / this.materiasAprobadas.length) : 0;
     const totalNotasAplazos = this.materias.reduce((sum, m) => sum + (m.notaFinal || 0), 0);
-    this.promedioConAplazos = this.materias.length ? Math.round(totalNotasAplazos / this.materias.length) : 0;
+    this.promedioConAplazos = this.materias.length ? (totalNotasAplazos / this.materias.length) : 0;
     this.porcentajeAvance = Math.round((this.materiasAprobadas.length / this.totalMaterias) * 100);
   }
 
