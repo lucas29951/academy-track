@@ -39,9 +39,9 @@
           </div>
           <footer class="card-footer is-size-7 has-text-weight-medium" [ngClass]="getCardFooterClass(materia.estado)">
             <a class="card-footer-item" (click)="openModal(materia)">Aprobada</a>
-            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'regular')" [ngClass]="{'is-hidden': materia.estado === 'regular'}">Regular</a>
-            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'en curso')" [ngClass]="{'is-hidden': materia.estado === 'en curso' }">En Curso</a>
-            <a href="/materias" class="card-footer-item" (click)="changeState(materia, 'reprobada')">Reprobada</a>
+            <a href="/seguimiento" class="card-footer-item" (click)="changeState(materia, 'regular')" [ngClass]="{'is-hidden': materia.estado === 'regular'}">Regular</a>
+            <a href="/seguimiento" class="card-footer-item" (click)="changeState(materia, 'en curso')" [ngClass]="{'is-hidden': materia.estado === 'en curso' }">En Curso</a>
+            <a href="/seguimiento" class="card-footer-item" (click)="changeState(materia, 'reprobada')">Reprobada</a>
           </footer>
         </div>
       </div>
