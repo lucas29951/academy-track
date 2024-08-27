@@ -7,6 +7,7 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Instalación](#instalación)
+- [Uso](#uso)
 
 ## Características
 
@@ -46,3 +47,11 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
    ng serve
 
 5. Abre el navegador y accede a `http://localhost:4200`.
+
+## Uso
+
+1. Al iniciar la aplicación por primera vez, se verifica si los datos de las materias están en LocalStorage. Si no están, se muestra un botón de inicio para cargarlos.
+
+2. La vista principal muestra las materias agrupadas por año y módulo, permitiendo al usuario interactuar con cada una para cambiar su estado.
+
+3. El header contiene opciones como `Aprobadas`, `Historia Académica`, y `Ayuda/Guía`, facilitando la navegación y el acceso a la información.
