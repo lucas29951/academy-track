@@ -9,6 +9,7 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Capturas de Pantalla](#capturas-de-pantalla)
+- [Contribuciones](#contribuciones)
 
 ## Características
 
@@ -62,3 +63,13 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 _Vista de las materias agrupadas por año y módulo._
 
 _Modal para ingresar la nota final de una materia aprobada._
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, sigue los siguientes pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama `(git checkout -b feature/nueva-funcionalidad)`.
+3. Realiza tus cambios y haz commit `(git commit -m 'Añadir nueva funcionalidad')`.
+4. Sube los cambios a tu fork `(git push origin feature/nueva-funcionalidad)`.
+5. Abre un _`Pull Request`_ en este repositorio.
