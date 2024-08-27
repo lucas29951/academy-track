@@ -6,6 +6,7 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#instalación)
 
 ## Características
 
@@ -21,3 +22,27 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 - **TypeScript:** Lenguaje de programación utilizado para el desarrollo de la lógica.
 - **Bulma:** Framework CSS para el diseño y la estructura visual.
 - **LocalStorage:** Almacenamiento de datos en el navegador para persistencia.
+
+## Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/lucas29951/academy-track.git
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd academy-track
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+
+4. Inicia la aplicación:
+
+   ```bash
+   ng serve
+
+5. Abre el navegador y accede a `http://localhost:4200`.
