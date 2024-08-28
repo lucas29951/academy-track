@@ -1,5 +1,7 @@
 # Academy Track
 
+![Principal](./src/assets/screenshots/academy-track-main.png)
+
 Academy Track es una aplicación web desarrollada en Angular que permite a los estudiantes universitarios gestionar y visualizar el avance de sus materias a lo largo de su carrera. La aplicación ofrece una vista dinámica y organizada de las materias, agrupadas por año y módulo, e incluye funcionalidades que facilitan el seguimiento del progreso académico.
 
 ## Tabla de Contenidos
@@ -60,9 +62,11 @@ Academy Track es una aplicación web desarrollada en Angular que permite a los e
 
 ## Capturas de Pantalla
 
+![Seguimiento](./src/assets/screenshots/academy-track-seg#2.png)
 _Vista de las materias agrupadas por año y módulo._
 
-_Modal para ingresar la nota final de una materia aprobada._
+![Historia Academica](./src/assets/screenshots/academy-track-his.png)
+_Vista resumen de la Historia Academica del alumno._
 
 ## Contribuciones
 
