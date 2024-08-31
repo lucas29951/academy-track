@@ -40,9 +40,10 @@ export class HistoriaComponent implements OnInit {
     this.materiasEnCurso = this.materias.filter(m => m.estado === 'en curso');
     this.materiasRegulares = this.materias.filter(m => m.estado === 'regular');
     const totalNotas = this.materiasAprobadas.reduce((sum, m) => sum + (m.notaFinal || 0), 0);
-    this.promedioGeneral = this.materiasAprobadas.length ? (totalNotas / this.materiasAprobadas.length) : 0;
-    const totalNotasAplazos = this.materias.reduce((sum, m) => sum + (m.notaFinal || 0), 0);
-    this.promedioConAplazos = this.materias.length ? (totalNotasAplazos / this.materias.length) : 0;
+    this.promedioGeneral = this.materiasAprobadas.length ? parseFloat((totalNotas / this.materiasAprobadas.length).toFixed(1)) : 0;
+    const materiasConNota = this.materias.filter(m => m.notaFinal > 0);
+    const totalNotasAplazos = materiasConNota.reduce((sum, m) => sum + m.notaFinal, 0);
+    this.promedioConAplazos = materiasConNota.length ? parseFloat((totalNotasAplazos / materiasConNota.length).toFixed(1)) : 0;
     this.porcentajeAvance = Math.round((this.materiasAprobadas.length / this.totalMaterias) * 100);
   }
 
@@ -64,7 +65,9 @@ export class HistoriaComponent implements OnInit {
     switch (estado) {
       case 'aprobada': return 'has-text-success';
       case 'en curso': return 'has-text-warning';
-      case 'regular': return 'has-text-info';
+      case 'regular': return 'has-text-link';
+      case 'reprobada': return 'has-text-danger';
+      case 'habilitada': return 'has-text-info';
       default: return '';
     }
   }
