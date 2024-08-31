@@ -133,7 +133,7 @@ export class SeguimientoComponent implements OnInit {
   saveNotaFinal() {
     if (this.materiaSeleccionada && this.notaFinal !== null) {
       this.materiaSeleccionada.notaFinal = this.notaFinal;
-      this.materiaSeleccionada.estado = 'aprobada';
+      this.materiaSeleccionada.estado = this.notaFinal >= 4 ? 'aprobada' : 'reprobada';
       this.updateLocalStorage();
     }
     this.isModalActive = false;
