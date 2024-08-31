@@ -1,0 +1,28 @@
+
+@media (min-width: 300px) and (max-width: 480px){
+    .boxCustom {
+        width: 95%;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width:767px){
+    .boxCustom {
+        width: 95%;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .boxCustom {
+        width: 95%;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1999px){
+    .boxCustom {
+        width: 95%;
+        margin: 2rem auto;
+    }
+}
