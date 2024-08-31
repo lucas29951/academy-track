@@ -63,15 +63,14 @@
         <div class="box mb-3 boxMateria">
           <h3 class="title is-5">{{ materia.nombre }}</h3>
           <p><strong>Estado: </strong> <span [ngClass]="getClassForEstado(materia.estado)">{{ materia.estado }}</span></p>
-          <p><strong>Nota Final:</strong> {{ materia.notaFinal || 'N/A' }}</p>
-          <p><strong>Fecha de Aprobación:</strong> {{ materia.fechaAprobacion || 'N/A' }}</p>
+          <p><strong>Nota Final:</strong> {{ materia.notaFinal || '-' }}</p>
+          <p><strong>Fecha de Aprobación:</strong> {{ materia.fechaAprobacion || '-' }}</p>
         </div>
       </div>
     </section>
   
     <section class="box my-5">
       <h2 class="title is-4">Progreso por Año/Semestre</h2>
-      <!-- Aquí puedes añadir un componente desplegable para cada año o semestre -->
       <div *ngFor="let year of aniosCursados">
         <h3 class="title is-5 is-clickable is-flex is-align-items-center is-justify-content-space-between box has-background-dark mb-4" (click)="toggleYear(year)">
           {{ year.anio }}° Año
@@ -80,9 +79,8 @@
           </span>
         </h3>
         <div *ngIf="year.open" class="mb-4">
-          <!-- Mostrar materias de ese año -->
-          <div *ngFor="let materia of year.materias" class="ml-4">
-            <li>{{ materia.nombre }}</li>
+          <div *ngFor="let materia of year.materias">
+            <li class="ml-6">{{ materia.nombre }}</li>
           </div>
         </div>
       </div>
