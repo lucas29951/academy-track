@@ -592,7 +592,7 @@ export class MateriasService {
             },
             {
               "id": 24,
-              "nombre": "Análisis Matemático IV", 
+              "nombre": "Climatología", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 6, 
@@ -604,7 +604,7 @@ export class MateriasService {
             }, 
             { 
               "id": 25, 
-              "nombre": "Didáctica de la Matemática I", 
+              "nombre": "Didáctica Específica", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 4, 
@@ -616,7 +616,7 @@ export class MateriasService {
             }, 
             { 
               "id": 26, 
-              "nombre": "Electromagnetismo", 
+              "nombre": "Laboratorio III", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 7, 
@@ -628,7 +628,7 @@ export class MateriasService {
             }, 
             { 
               "id": 27, 
-              "nombre": "Estadística y Probabilidades", 
+              "nombre": "Mecánica Analítica", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 5, 
@@ -640,7 +640,7 @@ export class MateriasService {
             }, 
             { 
               "id": 28, 
-              "nombre": "Historia de la Ciencia", 
+              "nombre": "Probabilidad y Estadística", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 3, 
@@ -652,7 +652,7 @@ export class MateriasService {
             }, 
             { 
               "id": 29, 
-              "nombre": "Práctica Profesional Docente III (PPD III)", 
+              "nombre": "Sociología de la Educación", 
               "modulo": 5, 
               "anio": 3, 
               "horasSemanales": 50, 
@@ -676,7 +676,7 @@ export class MateriasService {
             }, 
             { 
               "id": 31, 
-              "nombre": "Didáctica de la Matemática II", 
+              "nombre": "Ciencias de la Tierra", 
               "modulo": 6, 
               "anio": 3, 
               "horasSemanales": 5, 
@@ -688,7 +688,7 @@ export class MateriasService {
             }, 
             { 
               "id": 32, 
-              "nombre": "Física Moderna", 
+              "nombre": "Electromagnetismo", 
               "modulo": 6, 
               "anio": 3, 
               "horasSemanales": 7, 
@@ -700,7 +700,7 @@ export class MateriasService {
             }, 
             { 
               "id": 33, 
-              "nombre": "Matemática Discreta", 
+              "nombre": "Física Moderna I", 
               "modulo": 6, 
               "anio": 3, 
               "horasSemanales": 6, 
@@ -712,7 +712,7 @@ export class MateriasService {
             }, 
             { 
               "id": 34, 
-              "nombre": "Optativa I", 
+              "nombre": "Historia de la Educación y Política Educacional Argentina", 
               "modulo": 6, 
               "anio": 3, 
               "horasSemanales": 4, 
@@ -724,7 +724,7 @@ export class MateriasService {
             }, 
             { 
               "id": 35, 
-              "nombre": "Didáctica de la Matemática III", 
+              "nombre": "Práctica Profesional Docente III (PPD III)", 
               "modulo": 7, 
               "anio": 4, 
               "horasSemanales": 5, 
@@ -748,7 +748,7 @@ export class MateriasService {
             }, 
             { 
               "id": 37, 
-              "nombre": "Optativa II", 
+              "nombre": "Epistemología", 
               "modulo": 7, 
               "anio": 4, 
               "horasSemanales": 4, 
@@ -760,7 +760,7 @@ export class MateriasService {
             }, 
             { 
               "id": 38, 
-              "nombre": "Práctica Profesional Docente IV (PPD IV)", 
+              "nombre": "Física Moderna II", 
               "modulo": 7, 
               "anio": 4, 
               "horasSemanales": 50, 
@@ -772,7 +772,7 @@ export class MateriasService {
             }, 
             { 
               "id": 39, 
-              "nombre": "Seminario de Integración y Práctica Profesional", 
+              "nombre": "Optativa", 
               "modulo": 7, 
               "anio": 4, 
               "horasSemanales": 4, 
@@ -784,7 +784,7 @@ export class MateriasService {
             }, 
             { 
               "id": 40, 
-              "nombre": "Taller de Didáctica de la Matemática", 
+              "nombre": "Residencia", 
               "modulo": 7, 
               "anio": 4, 
               "horasSemanales": 4, 
@@ -793,7 +793,67 @@ export class MateriasService {
               "correlativasAprobada": [],
               "estado": "no cursada", 
               "notaFinal": 0 
-            }
+            },
+            { 
+              "id": 41, 
+              "nombre": "Astrofísica y Cosmología", 
+              "modulo": 7, 
+              "anio": 4, 
+              "horasSemanales": 4, 
+              "horasTotales": 60, 
+              "correlativasRegular": [29], 
+              "correlativasAprobada": [],
+              "estado": "no cursada", 
+              "notaFinal": 0 
+            },
+            { 
+              "id": 42, 
+              "nombre": "Epistemología e Historia de la Física", 
+              "modulo": 7, 
+              "anio": 4, 
+              "horasSemanales": 4, 
+              "horasTotales": 60, 
+              "correlativasRegular": [29], 
+              "correlativasAprobada": [],
+              "estado": "no cursada", 
+              "notaFinal": 0 
+            },
+            { 
+              "id": 43, 
+              "nombre": "Higiene y Seguridad Laboral y Ambiental", 
+              "modulo": 7, 
+              "anio": 4, 
+              "horasSemanales": 4, 
+              "horasTotales": 60, 
+              "correlativasRegular": [29], 
+              "correlativasAprobada": [],
+              "estado": "no cursada", 
+              "notaFinal": 0 
+            },
+            { 
+              "id": 44, 
+              "nombre": "Laboratorio IV", 
+              "modulo": 8, 
+              "anio": 4, 
+              "horasSemanales": 7, 
+              "horasTotales": 105, 
+              "correlativasRegular": [25, 26, 30], 
+              "correlativasAprobada": [],
+              "estado": "no cursada", 
+              "notaFinal": 0 
+            },
+            { 
+              "id": 45, 
+              "nombre": "Práctica Profesional Docente IV (PPD IV)", 
+              "modulo": 8, 
+              "anio": 4, 
+              "horasSemanales": 1.7, 
+              "horasTotales": 50, 
+              "correlativasRegular": [25, 30, 35], 
+              "correlativasAprobada": [],
+              "estado": "no cursada", 
+              "notaFinal": 0 
+            },
           ]
         }
       ]
